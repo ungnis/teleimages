@@ -1,0 +1,4 @@
+#!/bin/sh
+
+dir="${1:-.}"
+sxiv $(readlink -f $dir) -bfqo | sed 's/^/"/;s/$/"/' | xclip -sel c
